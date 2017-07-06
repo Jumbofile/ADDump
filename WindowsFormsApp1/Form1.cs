@@ -9,15 +9,20 @@ using System.Windows.Forms;
 /*Active Directory Dump
  * By: Gregory Plachno
  * Made: 7/6/2017
- * v1.2.0
+ * v1.3.0
  */
 namespace ActiveDirectoryDump
 {
     public partial class Form1 : Form
     {
+        //Public Strings
         public String FilePathVariable = "";
         public String scriptPath = "";
         public String runtimePath = "";
+
+        //Public Booleans
+        public bool userTrue = false;
+        public bool computerTrue = false;
 
         public Form1()
         {
@@ -55,10 +60,10 @@ namespace ActiveDirectoryDump
             richTextBox.AppendText(Environment.NewLine + "Start.");
             // run our script and put the result into our textbox 
             // NOTE: make sure to change the path to the correct location of your script 
-            if (scriptPath != "")
+            if (userTrue == false && computerTrue == false)
             {
-                //run
-                folderBox.Text = RunScript(LoadScript(@scriptPath));
+                //pop up asking to select a script
+                System.Windows.Forms.MessageBox.Show("Select a group to dump.", "Error");
             }
             else
             {
@@ -77,7 +82,15 @@ namespace ActiveDirectoryDump
                 }
 
                 //run
-                folderBox.Text = RunScript(LoadScript(@scriptPath));
+                if (computerTrue == true)
+                {
+                    folderBox.Text = RunScript(LoadScript(@"S:\Utils\software\ADDump\scripts\adcomputertocsv.ps1"));
+                }
+                if (userTrue == true)
+                {
+                    folderBox.Text = RunScript(LoadScript(@"S:\Utils\software\ADDump\scripts\adtocsv.ps1"));
+                }
+
             }
             //Rich text append
             richTextBox.AppendText(Environment.NewLine + "Done.");
@@ -206,6 +219,35 @@ namespace ActiveDirectoryDump
         private void v110ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(userTrue == false)
+            {
+                userTrue = true;
+            }
+            else
+            {
+                userTrue = false;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (computerTrue == false)
+            {
+                computerTrue = true;
+            }
+            else
+            {
+                computerTrue = false;
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("By : Gregory Plachno","v1.3.0");
         }
     }
 }

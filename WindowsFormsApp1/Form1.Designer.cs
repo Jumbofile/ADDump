@@ -39,14 +39,14 @@
             this.runtimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.installToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.byGregPlachnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.v110ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // runButton
             // 
-            this.runButton.Location = new System.Drawing.Point(97, 68);
+            this.runButton.Location = new System.Drawing.Point(184, 69);
             this.runButton.Name = "runButton";
             this.runButton.Size = new System.Drawing.Size(109, 56);
             this.runButton.TabIndex = 0;
@@ -136,31 +136,40 @@
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.byGregPlachnoToolStripMenuItem,
-            this.v110ToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // byGregPlachnoToolStripMenuItem
+            // checkBox1
             // 
-            this.byGregPlachnoToolStripMenuItem.Name = "byGregPlachnoToolStripMenuItem";
-            this.byGregPlachnoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.byGregPlachnoToolStripMenuItem.Text = "By: Greg Plachno";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(15, 77);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(53, 17);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Users";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // v110ToolStripMenuItem
+            // checkBox2
             // 
-            this.v110ToolStripMenuItem.Name = "v110ToolStripMenuItem";
-            this.v110ToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.v110ToolStripMenuItem.Text = "v1.2.0";
-            this.v110ToolStripMenuItem.Click += new System.EventHandler(this.v110ToolStripMenuItem_Click);
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(15, 98);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(76, 17);
+            this.checkBox2.TabIndex = 7;
+            this.checkBox2.Text = "Computers";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 258);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.folderButton);
@@ -189,10 +198,10 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scriptLocationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem byGregPlachnoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem v110ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem runtimeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem installToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 
