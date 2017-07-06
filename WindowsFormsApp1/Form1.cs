@@ -9,7 +9,7 @@ using System.Windows.Forms;
 /*Active Directory Dump
  * By: Gregory Plachno
  * Made: 7/6/2017
- * v1.1.0
+ * v1.2.0
  */
 namespace ActiveDirectoryDump
 {
@@ -203,5 +203,9 @@ namespace ActiveDirectoryDump
             richTextBox.AppendText(Environment.NewLine + "Install Complete.");
         }
 
+        private void v110ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

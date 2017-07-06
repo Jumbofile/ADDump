@@ -35,12 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scriptLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.byGregPlachnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.v110ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runtimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.installToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byGregPlachnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.v110ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +112,28 @@
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
+            // scriptLocationToolStripMenuItem
+            // 
+            this.scriptLocationToolStripMenuItem.Name = "scriptLocationToolStripMenuItem";
+            this.scriptLocationToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.scriptLocationToolStripMenuItem.Text = "Script";
+            this.scriptLocationToolStripMenuItem.Click += new System.EventHandler(this.scriptLocationToolStripMenuItem_Click);
+            // 
+            // runtimeToolStripMenuItem
+            // 
+            this.runtimeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.installToolStripMenuItem});
+            this.runtimeToolStripMenuItem.Name = "runtimeToolStripMenuItem";
+            this.runtimeToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.runtimeToolStripMenuItem.Text = "Runtime";
+            // 
+            // installToolStripMenuItem
+            // 
+            this.installToolStripMenuItem.Name = "installToolStripMenuItem";
+            this.installToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.installToolStripMenuItem.Text = "Install";
+            this.installToolStripMenuItem.Click += new System.EventHandler(this.installToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -120,13 +142,6 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // scriptLocationToolStripMenuItem
-            // 
-            this.scriptLocationToolStripMenuItem.Name = "scriptLocationToolStripMenuItem";
-            this.scriptLocationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.scriptLocationToolStripMenuItem.Text = "Script";
-            this.scriptLocationToolStripMenuItem.Click += new System.EventHandler(this.scriptLocationToolStripMenuItem_Click);
             // 
             // byGregPlachnoToolStripMenuItem
             // 
@@ -138,22 +153,8 @@
             // 
             this.v110ToolStripMenuItem.Name = "v110ToolStripMenuItem";
             this.v110ToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.v110ToolStripMenuItem.Text = "v1.1.0";
-            // 
-            // runtimeToolStripMenuItem
-            // 
-            this.runtimeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.installToolStripMenuItem});
-            this.runtimeToolStripMenuItem.Name = "runtimeToolStripMenuItem";
-            this.runtimeToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.runtimeToolStripMenuItem.Text = "Runtime";
-            // 
-            // installToolStripMenuItem
-            // 
-            this.installToolStripMenuItem.Name = "installToolStripMenuItem";
-            this.installToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.installToolStripMenuItem.Text = "Install";
-            this.installToolStripMenuItem.Click += new System.EventHandler(this.installToolStripMenuItem_Click);
+            this.v110ToolStripMenuItem.Text = "v1.2.0";
+            this.v110ToolStripMenuItem.Click += new System.EventHandler(this.v110ToolStripMenuItem_Click);
             // 
             // Form1
             // 
