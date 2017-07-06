@@ -11,7 +11,6 @@ ______________________________________________________________#>
 
     #Import Active Directory and dump User info into a excel sheet
     Import-Module ActiveDirectory
-    #Param($path)
 
     #User Properties that are going to be listed
     Get-ADUser -Filter * -Properties * |
