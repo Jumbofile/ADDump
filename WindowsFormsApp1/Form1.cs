@@ -57,7 +57,7 @@ namespace ActiveDirectoryDump
 
         private void button1_Click(object sender, EventArgs e)
         {
-            richTextBox.AppendText(Environment.NewLine + "Start.");
+            
             // run our script and put the result into our textbox 
             // NOTE: make sure to change the path to the correct location of your script 
             if (userTrue == false && computerTrue == false)
@@ -67,19 +67,7 @@ namespace ActiveDirectoryDump
             }
             else
             {
-                //Setting script location
-                OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
-                openFileDialog1.InitialDirectory = "c:\\";
-                openFileDialog1.Filter = "PowerShell Scripts (*.ps1)|*.ps1";
-                openFileDialog1.FilterIndex = 0;
-                openFileDialog1.RestoreDirectory = true;
-
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    scriptPath = openFileDialog1.FileName;
-                    richTextBox.AppendText(Environment.NewLine + "Script Location Updated.");
-                }
+                richTextBox.AppendText(Environment.NewLine + "Start.");
 
                 //run
                 if (computerTrue == true)
@@ -90,11 +78,11 @@ namespace ActiveDirectoryDump
                 {
                     folderBox.Text = RunScript(LoadScript(@"S:\Utils\software\ADDump\scripts\adtocsv.ps1"));
                 }
-
+                //Rich text append
+                richTextBox.AppendText(Environment.NewLine + "Done.");
+                richTextBox.AppendText(Environment.NewLine + "File located at " + FilePathVariable);
             }
-            //Rich text append
-            richTextBox.AppendText(Environment.NewLine + "Done.");
-            richTextBox.AppendText(Environment.NewLine + "File located at " + FilePathVariable);
+           
         }
 
         private string RunScript(string scriptText)
