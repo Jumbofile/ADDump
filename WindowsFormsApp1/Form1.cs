@@ -16,7 +16,7 @@ namespace ActiveDirectoryDump
     public partial class Form1 : Form
     {
         //Public Strings
-        public String FilePathVariable = "";
+        public String FilePathVariable = "S:/Utils/documents/Active Directory Dumps";
         public String scriptPath = "";
         public String runtimePath = "";
 
@@ -31,7 +31,7 @@ namespace ActiveDirectoryDump
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            folderBox.Text = FilePathVariable;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -159,7 +159,6 @@ namespace ActiveDirectoryDump
                 errorText += e.Message + "\n";
                 return errorText;
             }
-            richTextBox.AppendText(Environment.NewLine + "Script Loaded.");
         }
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {

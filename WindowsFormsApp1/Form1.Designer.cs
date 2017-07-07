@@ -176,6 +176,7 @@
             this.Controls.Add(this.folderBox);
             this.Controls.Add(this.runButton);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Active Directory Dump";
