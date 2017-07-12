@@ -57,12 +57,11 @@ namespace ActiveDirectoryDump
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             // run our script and put the result into our textbox 
             // NOTE: make sure to change the path to the correct location of your script 
             if (userTrue == false && computerTrue == false)
             {
-                //pop up asking to select a script
+                //pop up asking to select a script.
                 System.Windows.Forms.MessageBox.Show("Select a group to dump.", "Error");
             }
             else
