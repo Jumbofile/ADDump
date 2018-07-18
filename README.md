@@ -1,4 +1,4 @@
-# ADDump
+# ADDump by Jumbofile
 Takes Active Directory Users and exports them to Excel (*.csv)
 
 Need to run as Admin
